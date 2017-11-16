@@ -18,7 +18,7 @@ public class MyAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return 5;
+        return 10;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         TextView tv = new TextView(context);
-        tv.setText("Hello World");
+        tv.setText("Hello World:" + position);
         return tv;
     }
 }

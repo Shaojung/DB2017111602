@@ -8,6 +8,7 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
     ListView lv;
     MyAdapter adapter;
+    String[] data = {"Bob", "Mary", "John", "Jack", "May", "Jane"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
