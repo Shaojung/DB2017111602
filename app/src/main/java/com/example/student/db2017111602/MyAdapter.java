@@ -1,17 +1,24 @@
 package com.example.student.db2017111602;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 /**
  * Created by student on 2017/11/16.
  */
 
 public class MyAdapter extends BaseAdapter {
+    Context context;
+    public MyAdapter(Context context)
+    {
+        this.context = context;
+    }
     @Override
     public int getCount() {
-        return 0;
+        return 5;
     }
 
     @Override
@@ -25,7 +32,9 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+    public View getView(int position, View view, ViewGroup viewGroup) {
+        TextView tv = new TextView(context);
+        tv.setText("Hello World");
+        return tv;
     }
 }
