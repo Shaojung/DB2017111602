@@ -8,7 +8,11 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
     ListView lv;
     MyAdapter adapter;
-    String[] data = {"Bob", "Mary", "John", "Jack", "May", "Jane"};
+    CityData[] data = {
+            new CityData("台北", "02"),
+            new CityData("台中", "04"),
+            new CityData("高雄", "07")
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

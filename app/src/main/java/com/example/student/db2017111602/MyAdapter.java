@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 public class MyAdapter extends BaseAdapter {
     Context context;
-    String[] data;
-    public MyAdapter(Context context, String[] data)
+    CityData[] data;
+    public MyAdapter(Context context, CityData[] data)
     {
         this.context = context;
         this.data = data;
@@ -39,7 +39,7 @@ public class MyAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View v = inflater.inflate(R.layout.myitem1, null);
         TextView tv = (TextView) v.findViewById(R.id.textView);
-        tv.setText(data[position]);
+        tv.setText(data[position].cityname);
         return v;
     }
 }
