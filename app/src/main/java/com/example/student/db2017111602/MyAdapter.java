@@ -12,13 +12,15 @@ import android.widget.TextView;
 
 public class MyAdapter extends BaseAdapter {
     Context context;
-    public MyAdapter(Context context)
+    String[] data;
+    public MyAdapter(Context context, String[] data)
     {
         this.context = context;
+        this.data = data;
     }
     @Override
     public int getCount() {
-        return 10;
+        return data.length;
     }
 
     @Override
@@ -34,7 +36,7 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         TextView tv = new TextView(context);
-        tv.setText("Hello World:" + position);
+        tv.setText(data[position]);
         return tv;
     }
 }
