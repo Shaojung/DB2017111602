@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -39,7 +40,11 @@ public class MyAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View v = inflater.inflate(R.layout.myitem1, null);
         TextView tv = (TextView) v.findViewById(R.id.textView);
+        TextView tv2 = (TextView) v.findViewById(R.id.textView2);
+        ImageView img = (ImageView) v.findViewById(R.id.imageView);
         tv.setText(data[position].cityname);
+        tv2.setText(data[position].citycode);
+        img.setImageResource(data[position].img);
         return v;
     }
 }

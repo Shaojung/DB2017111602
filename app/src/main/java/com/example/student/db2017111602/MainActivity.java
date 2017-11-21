@@ -9,9 +9,9 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     MyAdapter adapter;
     CityData[] data = {
-            new CityData("台北", "02"),
-            new CityData("台中", "04"),
-            new CityData("高雄", "07")
+            new CityData("台北", "02", R.drawable.tp),
+            new CityData("台中", "04", R.drawable.tc),
+            new CityData("高雄", "07", R.drawable.kh)
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
